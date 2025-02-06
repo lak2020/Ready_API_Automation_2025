@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="81e8a07c-8516-4cd8-9fc0-ab491b0359fd" created="3.58.0" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="REST Project 1" resourceRoot="${projectDir}" projectVersion="" updated="3.58.0 2025-01-10T10:05:45Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="f7a08f14-e7de-44ec-bee6-97932759f572" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://api.restful-api.dev" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings id="4c2a4579-3da8-4640-9f70-1bd5432d04ed"/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://api.restful-api.dev/</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Objects" path="/objects" id="b4970a90-76b6-4c65-9ead-5952c938884a">
+      <con:settings/>
+      <con:parameters/>
+      <con:resource name="{ID}" path="{ID}" id="31c4377b-dfca-4e12-ad23-159cb69ec9d3">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>ID</con:name>
+            <con:value>ID</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>ID</con:default>
+          </con:parameter>
+        </con:parameters>
+        <con:method name="PUT/Update Data" id="840f952d-2734-44a7-a579-f67a34449d41" method="PUT">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="REQUEST">
+            <con:mediaType>application/json</con:mediaType>
+            <con:params/>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>404 400</con:status>
+            <con:params/>
+            <con:element xmlns:id="https://api.restful-api.dev/objects/ID">id:Fault</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:ff8="https://api.restful-api.dev/objects/ff808181932badb60194d23a4c454a15">ff8:Response</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>text/plain;charset=UTF-8</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:request name="Update Data" id="b042f411-1b01-41f1-9657-195f43420443" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.restful-api.dev/</con:endpoint>
+            <con:request>{
+   "name": "Apple MacBook Pro 16",
+   "data": {
+      "year": 20192010,
+      "price": 20492010.99,
+      "CPU model": "Intel Core i92010",
+      "Hard disk size": "1 TB2010",
+      "color": "silvertwoten"
+   }
+}</con:request>
+            <con:originalUri>https://api.restful-api.dev/objects/ID</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="ID" value="ID"/>
+            </con:parameters>
+          </con:request>
+        </con:method>
+        <con:method name="DEL/Delete Data" id="61edda51-6ade-4485-8ba6-47665eb14f0c" method="DELETE">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="REQUEST">
+            <con:mediaType>application/json</con:mediaType>
+            <con:params/>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:ff8="https://api.restful-api.dev/objects/ff808181932badb60194d278b9af4a5c">ff8:Response</con:element>
+          </con:representation>
+          <con:representation type="FAULT">
+            <con:mediaType>text/html</con:mediaType>
+            <con:status>502</con:status>
+            <con:params/>
+            <con:element>html</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>text/plain;charset=UTF-8</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:request name="Delete Data" id="b31d23ac-2d6b-4eba-9571-086f330caaa2" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.restful-api.dev/</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="ID" value="ID"/>
+            </con:parameters>
+          </con:request>
+        </con:method>
+        <con:method name="GET Data" id="688dd8c8-6934-48f2-ad44-0a5593697e28" method="GET">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>404</con:status>
+            <con:params/>
+            <con:element xmlns:ff8="https://api.restful-api.dev/objects/ff808181932badb60194d2916a9e4a6a">ff8:Fault</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:ff8="https://api.restful-api.dev/objects/ff808181932badb60194d2916a9e4a6a">ff8:Response</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>text/plain;charset=UTF-8</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element>data</con:element>
+          </con:representation>
+          <con:request name="Get Data" id="02e3f46c-19e7-4574-af3d-f670bcd55ab7" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.restful-api.dev/</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:method name="POST/Add Object" id="092e5598-7436-4b81-8c7f-4082f0948372" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:obj="https://api.restful-api.dev/objects">obj:Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element xmlns:obj="https://api.restful-api.dev/objects">obj:Fault</con:element>
+        </con:representation>
+        <con:request name="Add Data" id="42b8a80c-96ad-41ba-ad59-34fe1b63194b" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://api.restful-api.dev/</con:endpoint>
+          <con:request>{
+    "name" : "${#name}",
+    "data" : {
+       "year" : "${#year}",
+       "price" : "${#price}",
+       "CPU model" : "${#CPU model}",
+       "Hard disk size" : "${#Hard disk size}"
+    }
+ }</con:request>
+          <con:originalUri>https://api.restful-api.dev/objects</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+      <con:method name="GET/Retrieve Object" id="a30bbb92-e550-4346-92a4-bfbb98535486" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>ID</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Retrieve Data" id="e2f13b00-db7e-455c-97e4-de7e06d3bc93" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://api.restful-api.dev/</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://api.restful-api.dev/objects</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>ID</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="46b7e43f-f80e-4623-aec1-35b0046c0492" name="RESTful API Automation Test Suite">
+    <con:settings id="1d4bd2de-5562-4a4b-8087-34f6ab84b3a9"/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="79da7f17-78b9-4087-a742-4e2822bd8625" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 1.0" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="datasource" name="DataSource" id="a785fe5c-12a6-4665-80bb-264f7dfe8c2b">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>Restful_Add_Save_Update_data.xlsx</file>
+              <worksheet>Original_Data</worksheet>
+              <cell>A2</cell>
+              <ignoreEmpty>false</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>false</con:shared>
+          <con:restartShared>false</con:restartShared>
+          <con:property>id</con:property>
+          <con:property>name</con:property>
+          <con:property>Year</con:property>
+          <con:property>price</con:property>
+          <con:property>CPU model</con:property>
+          <con:property>Hard disk size</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+          <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST New Request" id="ce4979d5-15bc-4c15-a2be-876324e3fa93">
+        <con:settings/>
+        <con:config service="https://api.restful-api.dev" resourcePath="/objects" methodName="POST/Add Object" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST New Request" id="d3c45e41-0230-421c-88f3-154e842ec6f0" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.restful-api.dev</con:endpoint>
+            <con:request>{
+  "name": "${DataSource#name}",
+  "data": {
+    "year": "${DataSource#Year}",
+    "price": "${DataSource#price}",
+    "CPU model": "${DataSource#CPU model}",
+    "Hard disk size": "${DataSource#Hard disk size}"
+  }
+}</con:request>
+            <con:originalUri>https://api.restful-api.dev/objects</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes" id="6877d3fd-f57a-4298-b7bb-b7ec0f9ac7c8">
+              <con:settings/>
+              <con:configuration>
+                <codes>201,200,200,200,200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="979854ac-af7f-49dc-9605-6466810e3429" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" name="JSONPath RegEx Match [id]" id="ce02d04c-baeb-4ed4-a290-c510673fc22b">
+              <con:configuration>
+                <path>$['id']</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>^(?!\s*$).+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" name="JSONPath Match [name]" id="8fce3a98-2dc0-444a-adf0-41f76891b320">
+              <con:configuration>
+                <path>$['name']</path>
+                <content>${DataSource#name}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="c8a5e191-1e9a-42ae-9d25-37c5494762da" name="JSONPath Match 2 [year]">
+              <con:configuration>
+                <path>$['data']['year']</path>
+                <content>${DataSource#Year}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="a9367463-4c76-4ad7-afc0-a6b9c313caf5" name="JSONPath Match 3 [price]">
+              <con:configuration>
+                <path>$['data']['price']</path>
+                <content>${DataSource#price}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="351234b1-0868-4981-b4e2-d2e3c04c1ebe" name="JSONPath Match 4 [CPU model]">
+              <con:configuration>
+                <path>$['data']['CPU model']</path>
+                <content>${DataSource#CPU model}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="3f3587e7-2e6b-40f3-9a39-b6f68187a0ed" name="JSONPath Match 5 [Hard Disk size]">
+              <con:configuration>
+                <path>$['data']['Hard disk size']</path>
+                <content>${DataSource#Hard disk size}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="PropertyTransfer 3" id="4781162e-b307-4d56-9ae8-77bbfc51514a">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>id</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>POST New Request</con:sourceStep>
+            <con:sourcePath>$['id']</con:sourcePath>
+            <con:targetType>id</con:targetType>
+            <con:targetStep>Data Sink</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+            <con:name>name</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>POST New Request</con:sourceStep>
+            <con:sourcePath>$['name']</con:sourcePath>
+            <con:targetType>name</con:targetType>
+            <con:targetStep>Data Sink</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+            <con:name>year</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>POST New Request</con:sourceStep>
+            <con:sourcePath>$['data']['year']</con:sourcePath>
+            <con:targetType>year</con:targetType>
+            <con:targetStep>Data Sink</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false">
+            <con:name>CPU model</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>POST New Request</con:sourceStep>
+            <con:sourcePath>$['data']['CPU model']</con:sourcePath>
+            <con:targetType>cpu_model</con:targetType>
+            <con:targetStep>Data Sink</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+            <con:name>price</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>POST New Request</con:sourceStep>
+            <con:sourcePath>$['data']['price']</con:sourcePath>
+            <con:targetType>price</con:targetType>
+            <con:targetStep>Data Sink</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+            <con:name>Hard disk size</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>POST New Request</con:sourceStep>
+            <con:sourcePath>$['data']['Hard disk size']</con:sourcePath>
+            <con:targetType>Hard_disk_size</con:targetType>
+            <con:targetStep>Data Sink</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Delay" id="6f94f9f9-563f-4383-abb5-cfcdf6bd7f27">
+        <con:settings/>
+        <con:config>
+          <delay>3000</delay>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="Data Sink" id="2727e4fb-ec8b-4c7e-90e6-ff9c6becf16d">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file>Restful_Add_Save_Update_data.xlsx</file>
+              <outfile>Restful_Add_Save_Update_data.xlsx</outfile>
+              <worksheet>Saveddata</worksheet>
+              <cell>A2</cell>
+              <evaluateFormulas>false</evaluateFormulas>
+              <append>true</append>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>id</con:name>
+              <con:value>ff808181932badb60194dd019ecd5dad</con:value>
+            </con:property>
+            <con:property>
+              <con:name>name</con:name>
+              <con:value>Device E</con:value>
+            </con:property>
+            <con:property>
+              <con:name>year</con:name>
+              <con:value>2024</con:value>
+            </con:property>
+            <con:property>
+              <con:name>price</con:name>
+              <con:value>1250</con:value>
+            </con:property>
+            <con:property>
+              <con:name>cpu_model</con:name>
+              <con:value>Intel i9</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Hard_disk_size</con:name>
+              <con:value>3 TB</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="Data Source Loop" id="3229242f-dea1-4dec-bda0-3435ff16afbb">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>POST New Request</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>id</con:name>
+          <con:value/>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a785fe5c-12a6-4665-80bb-264f7dfe8c2b</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>ce4979d5-15bc-4c15-a2be-876324e3fa93</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>4781162e-b307-4d56-9ae8-77bbfc51514a</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>6f94f9f9-563f-4383-abb5-cfcdf6bd7f27</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>3229242f-dea1-4dec-bda0-3435ff16afbb</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2727e4fb-ec8b-4c7e-90e6-ff9c6becf16d</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="7cb4b597-fc95-4963-bed5-90c7b45debd4" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 2.0" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Get Request" id="1edb1f44-a433-455b-b21b-e9692602979c">
+        <con:settings/>
+        <con:config service="https://api.restful-api.dev" resourcePath="/objects/{ID}" methodName="GET Data" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Get Request" id="02e3f46c-19e7-4574-af3d-f670bcd55ab7" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.restful-api.dev/</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.restful-api.dev/objects/ff808181932badb60194d2916a9e4a6a</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="45bf80c6-53c5-4e5d-8c5c-c3af2cf5a242" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="0668551c-129d-4174-a9f6-2eb76bc3d3a4" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" name="JSONPath Match" id="d3a83472-65bc-4b02-a6b9-8138de4df582">
+              <con:configuration>
+                <path>$['id']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 1.0#Data Sink]#id}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="49cfce45-af1e-4bdc-be75-b334e77887b9" name="Match content of [name]">
+              <con:configuration>
+                <path>$['name']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 1.0#DataSource]#name}</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" name="Match content of [year]" id="06cf428f-c97e-46d5-97ff-e6305161c363">
+              <con:configuration>
+                <path>$['data']['year']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 1.0#Data Sink]#year#$}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="ab7bf5b0-c39c-4856-b0ff-0af249753fe5" name="Match content of [price]">
+              <con:configuration>
+                <path>$['data']['price']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 1.0#Data Sink]#price#$}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="feca9782-1272-4a4f-9405-404c17d89212" name="Match content of [CPU model]">
+              <con:configuration>
+                <path>$['data']['CPU model']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 1.0#Data Sink]#cpu_model}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" name="Match content of [Hard disk size]" id="2ae68100-8cea-4551-b7c5-b0b3dd146e07">
+              <con:configuration>
+                <path>$['data']['Hard disk size']</path>
+                <content>${Get Request#Response#$['data']['Hard disk size']}</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="ID" value="${#[RESTful API Automation Test Suite#Test Case 1.0#Data Sink]#id}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>1edb1f44-a433-455b-b21b-e9692602979c</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="ccbcffe7-5809-46f7-9943-3299117505e5" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 3.0" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="PUT Request 3.0" id="fab9d568-7357-4276-9670-c28c80a511e2">
+        <con:settings/>
+        <con:config service="https://api.restful-api.dev" resourcePath="/objects/{ID}" methodName="PUT/Update Data" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="PUT Request 3.0" id="a85de3a4-82c8-414a-a3c4-51afaf7c3f39" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.restful-api.dev/</con:endpoint>
+            <con:request>{
+  "name": "Updated Apple MacBook Pro 16",
+  "data": {
+    "year": 201900,
+    "price": 204900.99,
+    "CPU model": "Updated Intel Core i92010",
+    "Hard disk size": "Updated 1 TB ",
+    "color": "Updated silver"
+  }
+}</con:request>
+            <con:originalUri>https://api.restful-api.dev/objects/6</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" name="Valid HTTP Status Codes" id="691d1fd2-9833-4c4c-af6e-f8cac38167d8">
+              <con:settings/>
+              <con:configuration>
+                <codes>200,201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="d900eccf-3dd0-4d9e-9108-573319d778dd" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" name="JSONPath Match [id]" id="c07f6592-5df1-477e-a104-26725342f6f7">
+              <con:configuration>
+                <path>$['id']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 1.0#Data Sink]#id}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="d807cda6-b948-47ef-9953-d9ef95939021" name="JSONPath Match 2 [name]">
+              <con:configuration>
+                <path>$['name']</path>
+                <content>${PUT Request 3.0#Request#$['name']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="81d25dd8-ae27-4b7d-84c3-a15d34665078" name="JSONPath Match 3 [year]">
+              <con:configuration>
+                <path>$['data']['year']</path>
+                <content>${PUT Request 3.0#Request#$['data']['year']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="f648db86-07a9-4495-8463-f4a9e1e8ab28" name="JSONPath Match 4 [price]">
+              <con:configuration>
+                <path>$['data']['price']</path>
+                <content>${PUT Request 3.0#Request#$['data']['price']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="3706f1c7-ba21-4ff2-8307-e36476d7614c" name="JSONPath Match 5 [CPU Model]">
+              <con:configuration>
+                <path>$['data']['CPU model']</path>
+                <content>${PUT Request 3.0#Request#$['data']['CPU model']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="6d228866-cd4c-4cc7-a62f-a938a1974de8" name="JSONPath Match 6 [Hard disk size]">
+              <con:configuration>
+                <path>$['data']['Hard disk size']</path>
+                <content>${PUT Request 3.0#Request#$['data']['Hard disk size']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="2b39bf04-6c45-48cc-bac2-3c2604f089a6" name="JSONPath Match 7 [Color]">
+              <con:configuration>
+                <path>$['data']['color']</path>
+                <content>${PUT Request 3.0#Request#$['data']['color']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="a16a0f4a-70a1-4133-b872-445cf946835d" name="JSONPath RegEx Match [updatedAt field not empty]">
+              <con:configuration>
+                <path>$['updatedAt']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}\+\d{2}:\d{2}" </regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="ID" value="${#[RESTful API Automation Test Suite#Test Case 1.0#Data Sink]#id}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>ID</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="PropertyTransfer 1" id="7b71cd23-3d84-435a-a2c9-21daa5e383c4">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>year</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>PUT Request 3.0</con:sourceStep>
+            <con:sourcePath>$['data']['year']</con:sourcePath>
+            <con:targetType>Update_year</con:targetType>
+            <con:targetStep>Data Sink 2</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" entitize="false" ignoreEmpty="false" transferToAll="false" transferChildNodes="false">
+            <con:name>id</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>PUT Request 3.0</con:sourceStep>
+            <con:sourcePath>$['id']</con:sourcePath>
+            <con:targetType>Update_id</con:targetType>
+            <con:targetStep>Data Sink 2</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+            <con:name>name</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>PUT Request 3.0</con:sourceStep>
+            <con:sourcePath>$['name']</con:sourcePath>
+            <con:targetType>Update_name</con:targetType>
+            <con:targetStep>Data Sink 2</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+            <con:name>price</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>PUT Request 3.0</con:sourceStep>
+            <con:sourcePath>$['data']['price']</con:sourcePath>
+            <con:targetType>Updated_price</con:targetType>
+            <con:targetStep>Data Sink 2</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+            <con:name>CPU model</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>PUT Request 3.0</con:sourceStep>
+            <con:sourcePath>$['data']['CPU model']</con:sourcePath>
+            <con:targetType>Update_cpu_model</con:targetType>
+            <con:targetStep>Data Sink 2</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+            <con:name>Hard disk size</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>PUT Request 3.0</con:sourceStep>
+            <con:sourcePath>$['data']['Hard disk size']</con:sourcePath>
+            <con:targetType>Update_harddisk_size</con:targetType>
+            <con:targetStep>Data Sink 2</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+            <con:name>color</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>PUT Request 3.0</con:sourceStep>
+            <con:sourcePath>$['data']['color']</con:sourcePath>
+            <con:targetType>Updated_color</con:targetType>
+            <con:targetStep>Data Sink 2</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true">
+            <con:name>updatedAt</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>PUT Request 3.0</con:sourceStep>
+            <con:sourcePath>$['updatedAt']</con:sourcePath>
+            <con:targetType>Updated_UpdatedAt</con:targetType>
+            <con:targetStep>Data Sink 2</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Delay" id="2133a72e-becb-4760-a392-8127fbcfad32">
+        <con:settings/>
+        <con:config>
+          <delay>1000</delay>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="Data Sink 2" id="4721ca58-4cf9-4912-a08d-6acf626e738f">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file/>
+              <outfile>Restful_Add_Save_Update_data.xlsx</outfile>
+              <worksheet>Updated_Data</worksheet>
+              <cell>A2</cell>
+              <evaluateFormulas>false</evaluateFormulas>
+              <append>false</append>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>Update_id</con:name>
+              <con:value>ff808181932badb60194dd019ecd5dad</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Update_name</con:name>
+              <con:value>Updated Apple MacBook Pro 16</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Update_year</con:name>
+              <con:value>201900</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Updated_price</con:name>
+              <con:value>204900.99</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Update_cpu_model</con:name>
+              <con:value>Updated Intel Core i92010</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Update_harddisk_size</con:name>
+              <con:value>Updated 1 TB </con:value>
+            </con:property>
+            <con:property>
+              <con:name>Updated_color</con:name>
+              <con:value>Updated silver</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Updated_UpdatedAt</con:name>
+              <con:value>2025-02-06T20:44:22.707+00:00</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="4306b471-a626-4cb6-a4ab-ded0bd462238" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 4.0" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Get Updated Request" id="c0f7c75c-7d24-424a-a4c7-9ba81afa4493">
+        <con:settings/>
+        <con:config service="https://api.restful-api.dev" resourcePath="/objects/{ID}" methodName="GET Data" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Get Updated Request" id="02e3f46c-19e7-4574-af3d-f670bcd55ab7" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.restful-api.dev/</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.restful-api.dev/objects/ID</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a7e39562-023b-4265-b8c5-ad3f3d832438" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="48bbda34-5b18-45de-a98c-0dca38bef234" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" name="Match content of [id]" id="9a57af0c-8c0a-4d91-997e-dc7649ec5a5c">
+              <con:configuration>
+                <path>$['id']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 3.0#PUT Request 3.0]#Response#$['id']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="a1942d8e-8777-49d7-9a9c-5a821e5b2ae4" name="Match content of [name]">
+              <con:configuration>
+                <path>$['name']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 3.0#PUT Request 3.0]#Response#$['name']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="5e587ddd-7d08-487c-9241-2672cc4437ae" name="Match content of [year]">
+              <con:configuration>
+                <path>$['data']['year']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 3.0#PUT Request 3.0]#Response#$['data']['year']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="bb0167e6-18a9-49d1-af0a-7e52cf0577f2" name="Match content of [price]">
+              <con:configuration>
+                <path>$['data']['price']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 3.0#PUT Request 3.0]#Response#$['data']['price']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="b7b6cec0-e23e-449e-b1ab-7d2b16210e0d" name="Match content of [CPU model]">
+              <con:configuration>
+                <path>$['data']['CPU model']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 3.0#PUT Request 3.0]#Response#$['data']['CPU model']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="4d76e076-9b16-4e40-99f4-447032d23ea9" name="Match content of [Hard disk size]">
+              <con:configuration>
+                <path>$['data']['Hard disk size']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 3.0#PUT Request 3.0]#Response#$['data']['Hard disk size']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="84bebe2a-fa55-42f3-89ff-223d1a22cda5" name="Match content of [color]">
+              <con:configuration>
+                <path>$['data']['color']</path>
+                <content>${#[RESTful API Automation Test Suite#Test Case 3.0#PUT Request 3.0]#Response#$['data']['color']}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="ID" value="${#[RESTful API Automation Test Suite#Test Case 3.0#Data Sink 2]#Update_id}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="18917fae-de7d-43f1-aa3c-91037dc8b932" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 5.0" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Delete Request" id="13f60672-832d-4b08-a116-c6b386af9a84">
+        <con:settings/>
+        <con:config service="https://api.restful-api.dev" methodName="DEL/Delete Data" resourcePath="/objects/{ID}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Delete Request" id="6d10d2d0-eaa3-463a-8eeb-c18ce1d11628" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>https://api.restful-api.dev/</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.restful-api.dev/objects/ff808181932badb60194d278b9af4a5c</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="16b1dde6-d8c9-4244-b019-4fce7cf0ef6c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath RegEx Match" id="154d7088-7db7-47ab-ae5b-769f6cd9e417" name="JSONPath RegEx Match [Object is deleted]">
+              <con:configuration>
+                <path>$['message']</path>
+                <content>false</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+                <regEx>$[?(@.message =~ /^Object with id = [a-f0-9\-]+ has been deleted\.$/)]
+</regEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="ID" value="${#[RESTful API Automation Test Suite#Test Case 3.0#Data Sink 2]#Update_id}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>ID</con:name>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
