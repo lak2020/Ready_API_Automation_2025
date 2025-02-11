@@ -1,0 +1,22 @@
+trigger:
+  branches:
+    include:
+      - master  # Runs pipeline on push to master
+pool:
+  name: Default  # Keeping the specified agent pool
+steps:
+  - checkout: self  # Clones the repository
+  - task: PowerShell@2
+    displayName: 'Run ReadyAPI Tests'
+    inputs:
+      targetType: 'inline'
+      script: |
+        $readyApiPath = "C:\Program Files\SmartBear\ReadyAPI-3.58.0\bin\testrunner.bat"
+        $projectPath = "$(Build.SourcesDirectory)\REST Project 1-readyapi-project.xml"
+        $reportPath = "$(Build.ArtifactStagingDirectory)\reports"
+        & "$readyApiPath" -r -a -j -f "$reportPath" -RJUnit -E "Default environment" "$projectPath"
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Test Reports'
+    inputs:
+      pathToPublish: '$(Build.ArtifactStagingDirectory)\reports'
+      artifactName: 'TestReports'
