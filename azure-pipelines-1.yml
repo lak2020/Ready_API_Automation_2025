@@ -3,7 +3,7 @@ trigger:
     include:
       - master  # Runs pipeline on push to master
 pool:
-  name: Default  # Keeping the specified agent pool
+  name: Azure Pipelines  # Keeping the specified agent pool
 steps:
   - checkout: self  # Clones the repository
   - task: PowerShell@2
