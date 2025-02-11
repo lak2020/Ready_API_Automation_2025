@@ -15,7 +15,7 @@ steps:
     inputs:
       targetType: 'inline'
       script: |
-        $installerUrl = "https://download.smartbear.com/readyapi/installers/ReadyAPI-3.58.0.exe"
+        $installerUrl = "https://storage256.blob.core.windows.net/readapi/ReadyAPI-x64-3.58.0_R60870089923SLM.exe?sp=r&st=2025-02-11T08:44:00Z&se=2025-02-27T16:44:00Z&spr=https&sv=2022-11-02&sr=b&sig=B70uSs7tDBWI%2FFvIhWU9Du8F5fRfIP32xrlI3Zi98mM%3D"
         $installerPath = "$(Build.ArtifactStagingDirectory)\ReadyAPI-3.58.0.exe"
         
         # Download ReadyAPI
