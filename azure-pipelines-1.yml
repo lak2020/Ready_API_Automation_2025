@@ -2,11 +2,43 @@ trigger:
   branches:
     include:
       - master  # Runs pipeline on push to master
+
 pool:
-  # name: Default  # Keeping the specified agent pool
   vmImage: 'windows-latest'  # Ensures the pipeline runs on a Windows agent
+
 steps:
   - checkout: self  # Clones the repository
+
+  # Step 1: Install ReadyAPI
+  - task: PowerShell@2
+    displayName: 'Download and Install ReadyAPI'
+    inputs:
+      targetType: 'inline'
+      script: |
+        $installerUrl = "https://download.smartbear.com/readyapi/installers/ReadyAPI-3.58.0.exe"
+        $installerPath = "$(Build.ArtifactStagingDirectory)\ReadyAPI-3.58.0.exe"
+        
+        # Download ReadyAPI
+        Invoke-WebRequest -Uri $installerUrl -OutFile $installerPath
+
+        # Install ReadyAPI silently
+        Start-Process -FilePath $installerPath -ArgumentList "/S" -NoNewWindow -Wait
+
+  # Step 2: Verify ReadyAPI Installation
+  - task: PowerShell@2
+    displayName: 'Verify ReadyAPI Installation'
+    inputs:
+      targetType: 'inline'
+      script: |
+        $readyApiPath = "C:\Program Files\SmartBear\ReadyAPI-3.58.0\bin\testrunner.bat"
+        if (Test-Path $readyApiPath) {
+          Write-Output "ReadyAPI is installed successfully."
+        } else {
+          Write-Error "ReadyAPI installation failed or not found at expected location."
+          exit 1
+        }
+
+  # Step 3: Run ReadyAPI Tests
   - task: PowerShell@2
     displayName: 'Run ReadyAPI Tests'
     inputs:
@@ -15,7 +47,14 @@ steps:
         $readyApiPath = "C:\Program Files\SmartBear\ReadyAPI-3.58.0\bin\testrunner.bat"
         $projectPath = "$(Build.SourcesDirectory)\REST Project 1-readyapi-project.xml"
         $reportPath = "$(Build.ArtifactStagingDirectory)\reports"
+
+        # Ensure report directory exists
+        New-Item -ItemType Directory -Path $reportPath -Force | Out-Null
+
+        # Run the ReadyAPI test
         & "$readyApiPath" -r -a -j -f "$reportPath" -RJUnit -E "Default environment" "$projectPath"
+
+  # Step 4: Publish Test Reports
   - task: PublishBuildArtifacts@1
     displayName: 'Publish Test Reports'
     inputs:
