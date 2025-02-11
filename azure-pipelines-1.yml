@@ -3,7 +3,8 @@ trigger:
     include:
       - master  # Runs pipeline on push to master
 pool:
-  name: Azure Pipelines  # Keeping the specified agent pool
+  # name: Default  # Keeping the specified agent pool
+  vmImage: 'windows-latest'  # Ensures the pipeline runs on a Windows agent
 steps:
   - checkout: self  # Clones the repository
   - task: PowerShell@2
